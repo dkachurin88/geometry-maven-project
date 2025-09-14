@@ -2,26 +2,24 @@ package com.example;
 
 public class App {
     public static void main(String[] args) {
-        // Создаем геометрические фигуры
         Circle circle = new Circle(5.0);
         Rectangle rectangle = new Rectangle(4.0, 6.0);
         Triangle triangle = new Triangle(3.0, 4.0, 5.0);
         
-        // Используем утилиты из GeometryUtils
-        System.out.println("=== GEOMETRIC SHAPES WITH UTILS ===");
+        Cube cube = new Cube(3.0);
+        Sphere sphere = new Sphere(2.0);
         
-        // Выводим информацию с помощью утилит
+        System.out.println("=== GEOMETRIC SHAPES ===");
+        
         GeometryHelper.printShapeInfo("Circle", circle.calculateArea(), circle.calculatePerimeter());
         GeometryHelper.printShapeInfo("Rectangle", rectangle.calculateArea(), rectangle.calculatePerimeter());
         GeometryHelper.printShapeInfo("Triangle", triangle.calculateArea(), triangle.calculatePerimeter());
         
-        // Сравниваем площади
+        System.out.println("=== 3D SHAPES ===");
+        System.out.println("Cube - Volume: " + cube.calculateVolume() + ", Surface Area: " + cube.calculateSurfaceArea());
+        System.out.println("Sphere - Volume: " + sphere.calculateVolume() + ", Surface Area: " + sphere.calculateSurfaceArea());
+        
         System.out.println("Comparison: " + 
             GeometryHelper.compareAreas(circle.calculateArea(), rectangle.calculateArea()));
-        
-        // Конвертация единиц
-        System.out.println("\nUnit conversion:");
-        System.out.println("150 cm = " + GeometryHelper.centimetersToMeters(150) + " m");
-        System.out.println("2.5 m = " + GeometryHelper.metersToCentimeters(2.5) + " cm");
     }
 }

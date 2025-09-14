@@ -9,5 +9,6 @@
     <module>GeometryLibrary</module>
     <module>GeometryApp</module>
     <module>GeometryUtils</module>
+    <module>ThreeDimensionalShapes</module>
   </modules>
 </project>
